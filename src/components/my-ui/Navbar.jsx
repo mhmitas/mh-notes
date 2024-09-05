@@ -1,5 +1,6 @@
+'use client'
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu, Notebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
@@ -8,23 +9,23 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { cn } from "@/lib/utils"
+import { usePathname } from "next/navigation"
 
 export default function Navbar() {
+    const pathname = usePathname()
 
     const navItems = [
         { name: "Home", href: "/" },
-        { name: "About", href: "/about" },
-        { name: "Services", href: "/services" },
-        { name: "Contact", href: "/contact" },
+        { name: "Todo", href: "/todo" },
     ]
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background dark:border-b">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-background dark:border-b shadow">
             <div className="my-container">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
-                        <Link href="/" className="text-2xl font-bold">
-                            Logo
+                        <Link href="/" className="text-2xl font-bold flex items-center">
+                            <Notebook className="text-blue-500" /> <span>MH</span>
                         </Link>
                     </div>
                     <div className="hidden md:block">
@@ -35,6 +36,7 @@ export default function Navbar() {
                                     href={item.href}
                                     className={cn(
                                         "text-foreground hover:bg-accent hover:text-accent-foreground",
+                                        pathname === item.href && 'bg-accent text-accent-foreground',
                                         "px-3 py-2 rounded-md text-sm font-medium",
                                         "transition-colors duration-200"
                                     )}
