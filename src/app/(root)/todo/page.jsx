@@ -41,11 +41,11 @@ export default function TodoList() {
                                 >
                                     <span className="text-foreground">{todo.text}</span>
                                     <div className="space-x-2">
-                                        <Button variant="outline" size="icon">
+                                        <Button variant="ghost" size="icon">
                                             <Edit className="w-4 h-4" />
                                             <span className="sr-only">Edit</span>
                                         </Button>
-                                        <Button variant="outline" size="icon">
+                                        <Button variant="ghost" size="icon">
                                             <Trash2 className="w-4 h-4" />
                                             <span className="sr-only">Delete</span>
                                         </Button>
