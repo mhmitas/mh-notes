@@ -69,6 +69,36 @@
   }
 }
 
-.my-container {
-  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-2xl
+@layer components {
+  .my-container {
+    @apply max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8
+  }
+
+  .title-1 {
+    @apply text-4xl font-bold text-primary mb-4;
+  }
+
+  .title-2 {
+    @apply text-3xl font-bold text-primary mb-4;
+  }
+
+  .title-3 {
+    @apply text-2xl font-medium text-accent mb-2;
+  }
+
+  .title-4 {
+    @apply text-xl font-normal text-muted-foreground mb-2;
+  }
+
+  .subtitle {
+    @apply text-lg font-medium text-muted-foreground mb-1;
+  }
+
+  .body-large {
+    @apply text-base text-foreground leading-relaxed;
+  }
+
+  .body-small {
+    @apply text-sm text-muted-foreground leading-normal;
+  }
 }

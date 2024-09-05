@@ -20,7 +20,7 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background dark:border-b shadow">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-background dark:border-b shadow h-16">
             <div className="my-container">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
