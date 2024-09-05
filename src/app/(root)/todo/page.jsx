@@ -1,5 +1,4 @@
 import { Trash2, Edit, Plus } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -7,21 +6,6 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 export default function TodoList() {
     // Hardcoded initial todos
     const todos = [
-        { id: 1, text: "Buy groceries" },
-        { id: 2, text: "Finish project report" },
-        { id: 3, text: "Call mom" },
-        { id: 4, text: "Go for a run" },
-        { id: 5, text: "Read a book" },
-        { id: 1, text: "Buy groceries" },
-        { id: 2, text: "Finish project report" },
-        { id: 3, text: "Call mom" },
-        { id: 4, text: "Go for a run" },
-        { id: 5, text: "Read a book" },
-        { id: 1, text: "Buy groceries" },
-        { id: 2, text: "Finish project report" },
-        { id: 3, text: "Call mom" },
-        { id: 4, text: "Go for a run" },
-        { id: 5, text: "Read a book" },
         { id: 1, text: "Buy groceries" },
         { id: 2, text: "Finish project report" },
         { id: 3, text: "Call mom" },
@@ -35,7 +19,7 @@ export default function TodoList() {
             <div className="mx-auto max-w-2xl bg-card text-card-foreground border rounded-lg">
                 <div>
                     {/* Add Todo Form */}
-                    <form className="flex p-4 space-x-2 mb-4">
+                    <form className="flex p-4 space-x-2">
                         <Input
                             type="text"
                             placeholder="Add a new todo"
